@@ -1,0 +1,78 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block contents%}
+<section id="about">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Cyber Security</h2>
+            <p class="text-center wow fadeInDown">
+                The Cyber Security (CS) enabled data transfer autonomous driving was set up by them to facilitate the
+                solution of this challenge. A network acts as the mediator, downloading data of the transmitter to the
+                autonomous car. For additional safety, the CS -based method Advanced Encryption Standard (AES) is
+                involved to decrypt the data, which is transferable to cypher text. The encryption content could be
+                deciphered by the secret key which is given by the transmitter to the peculiar AV. Customized particle
+                swarm efficiency would be used to modify a conventional neural network.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <img class="img-responsive" src="{%static 'images/about.png'%}" alt="">
+            </div>
+
+            <div class="col-sm-6 wow fadeInRight">
+                <h3 class="column-title">Admin User Login Here</h3>
+
+
+                <form action="{%url 'AdminLoginCheck'%}" method="POST" class="text-primary" style="width:100%">
+                    {% csrf_token %}
+                    <table>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="loginid" required
+                                       placeholder="Enter Login Id">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input type="password" class="form-control" name="pswd" required
+                                       placeholder="Enter password">
+                            </div>
+                        </div>
+
+
+                        <tr>
+                            <td style="padding:20px;">
+                                <button class="btn btn-block btn-primary text-white py-2 px-4"
+                                        style="margin-left:20%;"
+                                        type="submit">
+                                    Login
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-block btn-primary text-white py-2 px-4" style="margin-left:20%;"
+                                        type="reset">
+                                    Reset
+                                </button>
+                            </td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='GREEN'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</section><!--/#about-->
+
+{%endblock%}

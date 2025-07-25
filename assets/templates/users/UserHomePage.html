@@ -1,0 +1,71 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<section id="about">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Cyber Security</h2>
+            <p class="text-center wow fadeInDown">
+                The Cyber Security (CS) enabled data transfer autonomous driving was set up by them to facilitate the
+                solution of this challenge. A network acts as the mediator, downloading data of the transmitter to the
+                autonomous car. For additional safety, the CS -based method Advanced Encryption Standard (AES) is
+                involved to decrypt the data, which is transferable to cypher text. The encryption content could be
+                deciphered by the secret key which is given by the transmitter to the peculiar AV. Customized particle
+                swarm efficiency would be used to modify a conventional neural network.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <img class="img-responsive" src="{%static 'images/about.png'%}" alt="">
+            </div>
+
+            <div class="col-sm-6 wow fadeInRight">
+                <h3 class="column-title">Description of Algorithm</h3>
+                <p>
+                    Block cypher to 128-bit block size would be AES. It is
+                    available with keys of 128, 192, and 256 bits. The key size
+                    recommended by des igners for AES is 512 bits. Ten
+                    compute rounds make up the encryption process for 512-
+                    bit secrets. The remaining rounds in each scenario were the
+                    identical, with the exception of the final round. A 512-bit
+                    input message was used to build a 4 x 4 byte matrix that
+                    served as the state array. The novel technique uses 512-bit
+                    input blocks and keys, making it more immune to
+                    cryptanalysis while increasing the permitted area.
+                </p>
+
+                <p>
+                    AES-512 would be useful for applications that require high
+                    safety and are space-restricted. The various
+                    transformations work on the organizational outcomes,
+                    which were referred to as states; the state was essentially a
+                    rectangular array of bytes. The first 4 elements of the
+                    timetable are XORed to the input state before round-based
+                    encryption operations could occur. The proposed work's
+                    current stage was indicated at the bottom of the page. The
+                    proposed work's key function was calculated at the
+                    beginning of the next section.
+                </p>
+
+                <p>
+                    The column-by-column combination conversion works
+                    on the state and treats every section as a four-term
+                    polynomial. The goal of the phase should be to ensure that
+                    the bits are evenly distributed throughout numerous
+                    rounds. A column at a time is multiplied to achieve this.
+                    Every row value in a traditional matrix is used to calculate
+                    each column signal.
+                </p>
+
+
+                <a class="btn btn-primary" href="https://ieeexplore.ieee.org/document/10104702/" target="_blank">Learn
+                    More</a>
+
+            </div>
+        </div>
+    </div>
+</section><!--/#about-->
+
+{%endblock%}

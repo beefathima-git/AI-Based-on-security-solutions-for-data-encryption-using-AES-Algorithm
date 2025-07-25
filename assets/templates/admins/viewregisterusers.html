@@ -1,0 +1,62 @@
+{% extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+
+
+<section id="about">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Cyber Security</h2>
+            <p class="text-center wow fadeInDown">
+                The Cyber Security (CS) enabled data transfer autonomous driving was set up by them to facilitate the
+                solution of this challenge. A network acts as the mediator, downloading data of the transmitter to the
+                autonomous car. For additional safety, the CS -based method Advanced Encryption Standard (AES) is
+                involved to decrypt the data, which is transferable to cypher text. The encryption content could be
+                deciphered by the secret key which is given by the transmitter to the peculiar AV. Customized particle
+                swarm efficiency would be used to modify a conventional neural network.
+            </p>
+        </div>
+
+        <div class="row">
+             <h3 class="column-title">View Crypto Users and Activate</h3>
+            <table class="table table-bordered bg-light text-dark">
+                <thead>
+                <tr style="color:red;font-weight:bold;">
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Login ID</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Locality</th>
+                    <th>Status</th>
+                    <th>Activate</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in data %}
+                <tr style="color: Green">
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.loginid}}</td>
+                    <td>{{i.mobile}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.locality}}</td>
+                    <td>{{i.status}}</td>
+
+                    {% if i.status == 'waiting' %}
+                    <td><a class="btn-link" href="/ActivaUsers/?uid={{ i.id }}"
+                           style="color:DARKBLUE">Activate</a></td>
+                    {% else %}
+                    <td> Activated</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section><!--/#about-->
+
+{%endblock%}

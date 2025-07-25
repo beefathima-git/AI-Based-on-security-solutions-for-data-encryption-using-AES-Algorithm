@@ -1,0 +1,57 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<section id="about">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Cyber Security</h2>
+            <p class="text-center wow fadeInDown">
+                The Cyber Security (CS) enabled data transfer autonomous driving was set up by them to facilitate the
+                solution of this challenge. A network acts as the mediator, downloading data of the transmitter to the
+                autonomous car. For additional safety, the CS -based method Advanced Encryption Standard (AES) is
+                involved to decrypt the data, which is transferable to cypher text. The encryption content could be
+                deciphered by the secret key which is given by the transmitter to the peculiar AV. Customized particle
+                swarm efficiency would be used to modify a conventional neural network.
+            </p>
+        </div>
+
+        <div class="row">
+
+                <h3 class="column-title">Description of Algorithm</h3>
+
+ <table class="table table-bordered">
+    <thead>
+      <tr class="table-danger">
+        <th>S.No</th>
+        <th>File Name</th>
+        
+        <th>Date</th>
+        <!-- <th>View Cipher</th> -->
+        <th>Cipher Download</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in data %}
+     <tr style="color: BLUE; ">
+     <td>{{forloop.counter}}</td>
+     <td>{{i.filename}}</td>
+     
+     <td>{{i.cdate}}</td>
+     <!--<td><img src="{{i.file}}" width="45" height="40"> </td>-->
+     <!-- <td><a class="btn-link" href="{{i.file.url }}" target="_blank">Download</a></td> -->
+         <td><a class="btn-link" href="/download/?fileis={{i.filename }}" target="_blank">Download</a></td>
+     </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+
+
+
+            </div>
+        </div>
+    </div>
+</section><!--/#about-->
+
+{%endblock%}

@@ -1,0 +1,55 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<section id="about">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Cyber Security</h2>
+            <p class="text-center wow fadeInDown">
+                The Cyber Security (CS) enabled data transfer autonomous driving was set up by them to facilitate the
+                solution of this challenge. A network acts as the mediator, downloading data of the transmitter to the
+                autonomous car. For additional safety, the CS -based method Advanced Encryption Standard (AES) is
+                involved to decrypt the data, which is transferable to cypher text. The encryption content could be
+                deciphered by the secret key which is given by the transmitter to the peculiar AV. Customized particle
+                swarm efficiency would be used to modify a conventional neural network.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <img class="img-responsive" src="{%static 'images/about.png'%}" alt="">
+            </div>
+
+            <div class="col-sm-6 wow fadeInRight">
+                <h3 class="column-title">Upload a file</h3>
+                <span>Please select a file</span><br>
+{{msg}}
+              <form action="{%url 'UserUploadFiles'%}" method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+
+                    <div id="div_id_username" class="form-group"><label for="id_username" class=" requiredField">
+                        Select a Text File <span class="asteriskField">*</span> </label>
+                        <div> <input type="file" id="contact_subject" name="file" class="form-control" placeholder="Select an Image"  required/></div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Upload</button>
+
+                </form>
+                {% if messages %}
+                {% for message in messages %}
+                <font color='RED'> {{ message }}</font>
+                {% endfor %}
+                {% endif %}
+
+                </p>
+
+
+
+            </div>
+        </div>
+    </div>
+</section><!--/#about-->
+
+{%endblock%}
